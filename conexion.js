@@ -1,5 +1,7 @@
 require("dotenv").config();
 
+/* Conexion a servidor con credenciales guardadas en .env  */
+
 const { Pool } = require("pg");
 
 const pool = new Pool({
@@ -7,7 +9,7 @@ const pool = new Pool({
   user: process.env.PGUSER,
   password: process.env.PGPASSWORD,
   database: process.env.PGDATABASE,
-  /*   port: 3000, */
+  port: 3000,
   allowExitOnIdle: true,
 });
 

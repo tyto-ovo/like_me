@@ -1,5 +1,7 @@
 const pool = require("./conexion");
 
+/* funciones para obtener datos del servidor y agregar datos de forma segura*/
+
 const obtenerRegistros = async () => {
   const { rows } = await pool.query("SELECT * FROM posts");
   return rows;
