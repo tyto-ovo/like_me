@@ -15,8 +15,8 @@ app.get("./", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.get("/", async (req, res) => {
-  const registros = await   obtenerRegistros();
+app.get("./", async (req, res) => {
+  const registros = await obtenerRegistros();
   res.json(registros);
 });
 
